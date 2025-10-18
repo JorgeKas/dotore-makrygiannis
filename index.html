@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Cardiology clinic – compassionate heart care, diagnostics, and treatment."
+    />
+    <title>CardioCenter – Heart Care Clinic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Topbar -->
+    <div class="topbar" role="navigation" aria-label="Utility">
+      <div class="container topbar__inner">
+        <ul class="topbar__contacts" aria-label="Contact info">
+          <li>
+            <img
+              src="./assets/img/phone.svg"
+              alt="Phone"
+              width="18"
+              height="18"
+            />
+            <a href="tel:+11234567890">+30 210 686 7158</a>
+          </li>
+          <li>
+            <img
+              src="./assets/img/clock.svg"
+              alt="Hours"
+              width="18"
+              height="18"
+            />
+            Δε–Παρ: 09:00–18:00
+          </li>
+          <li>
+            <img
+              src="./assets/img/map-pin.svg"
+              alt="Location"
+              width="18"
+              height="18"
+            />
+            Ακροπόλεως 186, Νίκαια 18451
+          </li>
+        </ul>
+        <ul class="topbar__social" aria-label="Social links">
+          <li>
+            <a href="#" aria-label="Facebook"
+              ><img
+                src="./assets/img/facebook.svg"
+                alt=""
+                width="18"
+                height="18"
+            /></a>
+          </li>
+          <li>
+            <a href="#" aria-label="Twitter"
+              ><img
+                src="./assets/img/twitter.svg"
+                alt=""
+                width="18"
+                height="18"
+            /></a>
+          </li>
+          <li>
+            <a href="#" aria-label="YouTube"
+              ><img
+                src="./assets/img/youtube.svg"
+                alt=""
+                width="18"
+                height="18"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Header / Nav -->
+    <header class="header" role="banner">
+      <div class="container header__inner">
+        <a class="logo" href="/" aria-label="CardioCenter home">
+          <img
+            src="./assets/img/logo.svg"
+            width="160"
+            height="40"
+            alt="CardioCenter"
+          />
+        </a>
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Toggle navigation"
+        >
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+        <nav id="site-nav" class="nav" role="navigation" aria-label="Primary">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#home">HOME</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#services">SERVICES</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#timetable">TIMETABLE</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#about">ABOUT</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#blog">BLOG</a>
+            </li>
+            <li class="nav__item nav__cta">
+              <a class="button button--primary" href="#appointment"
+                >ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero Slider -->
+      <section id="home" class="hero" aria-label="Highlights">
+        <div
+          class="hero__slides"
+          data-autorotate="6000"
+          data-pause-on-hover="true"
+        >
+          <div class="hero__track">
+            <article
+              class="hero__slide is-active"
+              aria-roledescription="slide"
+              aria-label="1 of 3"
+            >
+              <div class="container hero__content has-media">
+                <div class="hero__text">
+                  <h1 class="hero__title">
+                    Ολοκληρωμένη φροντίδα για την υγεία σας
+                  </h1>
+                  <p class="hero__subtitle">
+                    Εξατομικευμένη, τεκμηριωμένη καρδιολογική φροντίδα με
+                    σύγχρονη διάγνωση, διαύγεια στην ενημέρωση και πραγματικό
+                    ενδιαφέρον για τον ασθενή.
+                  </p>
+                  <div class="hero__actions">
+                    <a class="button button--primary" href="#appointment"
+                      >ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a
+                    >
+                    <!-- <a class="button button--ghost" href="#services"
+                      >Explore Services</a -->
+                  </div>
+                </div>
+                <figure class="hero__media" aria-hidden="true">
+                  <img
+                    src="./assets/img/Stamakrigiannis.jpg"
+                    alt="Dr. Stamakrigiannis consulting a patient"
+                    loading="eager"
+                  />
+                </figure>
+              </div>
+            </article>
+            <article
+              class="hero__slide"
+              aria-roledescription="slide"
+              aria-label="2 of 3"
+            >
+              <div class="container hero__content has-media">
+                <div class="hero__text">
+                  <h2 class="hero__title">Advanced Diagnostics</h2>
+                  <p class="hero__subtitle">
+                    ECG, Echocardiography, and Stress Testing with modern
+                    equipment.
+                  </p>
+                  <div class="hero__actions">
+                    <a class="button button--primary" href="#services"
+                      >Our Diagnostics</a
+                    >
+                  </div>
+                </div>
+                <figure class="hero__media" aria-hidden="true">
+                  <img
+                    src="./assets/img/Stamakrigiannis.png"
+                    alt="Portrait of Dr. Stamakrigiannis"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+            </article>
+          </div>
+          <button
+            class="hero__control hero__control--prev"
+            aria-label="Previous slide"
+          >
+            ‹
+          </button>
+          <button
+            class="hero__control hero__control--next"
+            aria-label="Next slide"
+          >
+            ›
+          </button>
+          <div
+            class="hero__dots"
+            role="tablist"
+            aria-label="Slide navigation"
+          ></div>
+        </div>
+      </section>
+
+      <!-- Services Icons Grid -->
+      <section id="services" class="section section--muted">
+        <div class="container">
+          <header class="section__header">
+            <h2 class="section__title">Our Services</h2>
+            <p class="section__lead">
+              Heart-focused care covering prevention, diagnosis, and treatment.
+            </p>
+          </header>
+
+          <div class="grid grid--4">
+            <article class="service">
+              <div class="service__icon">❤</div>
+              <h3 class="service__title">ΚΑΡΔΙΟΛΟΓΙΚΟΣ ΕΛΕΓΧΟΣ</h3>
+              <p class="service__desc">
+                Κρατήστε την καρδιά σας υπό έλεγχο. Η έγκαιρη διάγνωση σημαίνει
+                διαρκής προστασία. Ολοκληρωμένος καρδιολογικός έλεγχος, απλός.
+              </p>
+            </article>
+            <article class="service">
+              <div class="service__icon">🩺</div>
+              <h3 class="service__title">ΑΡΡΥΘΜΙΕΣ (TRIPLEX)</h3>
+              <p class="service__desc">
+                Όταν ο καρδιακός σας παλμός είναι ακανόνιστος, μην περιμένετε.
+                Εντοπίζουμε, θεραπεύουμε και αποκαθιστούμε τον καρδιακό σας
+                ρυθμό. Η καρδιά σας αξίζει σταθερή φροντίδα.
+              </p>
+            </article>
+            <article class="service">
+              <div class="service__icon">🫀</div>
+              <h3 class="service__title">ΥΠΕΡΤΑΣΗ</h3>
+              <p class="service__desc">
+                Η υψηλή αρτηριακή πίεση είναι σιωπηλή — αλλά σοβαρή.
+                Παρακολουθήστε, διαχειριστείτε και προστατέψτε την καρδιά σας με
+                την καθοδήγηση ειδικών. Μείνετε ισορροπημένοι, διατηρήστε την
+                καρδιά σας υγιή.
+              </p>
+            </article>
+            <article class="service">
+              <div class="service__icon">🏃</div>
+              <h3 class="service__title">ΕΜΦΡΑΓΜΑ</h3>
+              <p class="service__desc">
+                Κάθε δευτερόλεπτο μετράει — δράστε γρήγορα, αναρρώστε πιο
+                δυνατά. Εξειδικευμένη φροντίδα για την πρόληψη και την ανάρρωση
+                μετά από καρδιακή προσβολή. Επειδή η καρδιά σας αξίζει μια
+                δεύτερη ευκαιρία.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Appointment CTA Strip -->
+      <aside id="appointment" class="cta">
+        <div class="container cta__inner">
+          <h3 class="cta__title">Θέλετε Ραντεβού?</h3>
+          <p class="cta__text">
+            Καλέστε τώρα ή κάντε κράτηση online για να προγραμματίσετε την
+            επίσκεψή σας.
+          </p>
+          <div class="cta__actions">
+            <a class="button button--light" href="tel:+302106867158"
+              >Καλέστε 210 686 7158</a
+            >
+            <a class="button button--dark" href="#">BOOK ONLINE</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Doctor / About -->
+      <section id="about" class="section">
+        <div class="container about">
+          <div class="about__photo" aria-hidden="true"></div>
+          <div class="about__content">
+            <h2 class="section__title">Dr. Μακρυγιάννης Σταμάτιος</h2>
+            <p class="section__lead">
+              MD, PhD, FESC, Interventional Cardiologist, "Hygeia" Hospital,
+              Athens Greece
+            </p>
+            <ul class="list list--check">
+              <li>
+                Απόφοιτος της Ιατρικής Σχολής του Εθνικού και Καποδιστριακού
+                Πανεπιστημίου Αθηνών (1999)
+              </li>
+              <li>
+                Διδάκτωρ της Ιατρικής Σχολής του Εθνικού και Καποδιστριακού
+                Πανεπιστημίου Αθηνών (2013)
+              </li>
+              <li>Εξειδίκευση στην Εντατικολογία</li>
+              <li>
+                Μετεκπαίδευση στη Επεμβατική Καρδιολογία με υποτροφία της
+                Ελληνικής Καρδιολογικής Εταιρείας
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Timetable / Opening Hours -->
+      <section id="timetable" class="section section--muted">
+        <div class="container">
+          <header class="section__header">
+            <h2 class="section__title">Ώρες Λειτουργίας</h2>
+          </header>
+          <div class="hours">
+            <div class="hours__row">
+              <span>Δευτέρα</span><span>09:00 – 18:00</span>
+            </div>
+            <div class="hours__row">
+              <span>Τρίτη</span><span>09:00 – 18:00</span>
+            </div>
+            <div class="hours__row">
+              <span>Τετάρτη</span><span>09:00 – 18:00</span>
+            </div>
+            <div class="hours__row">
+              <span>Πέμπτη</span><span>09:00 – 18:00</span>
+            </div>
+            <div class="hours__row">
+              <span>Παρασκευή</span><span>09:00 – 16:00</span>
+            </div>
+            <div class="hours__row">
+              <span>Σάββατο</span><span>Με Ραντεβού</span>
+            </div>
+            <div class="hours__row">
+              <span>Κυριακή</span><span>Κλειστά</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="section">
+        <div class="container">
+          <header class="section__header">
+            <h2 class="section__title">Λένε οι ασθενείς</h2>
+          </header>
+          <div class="testimonials" data-autorotate="8000">
+            <figure class="testimonial is-active">
+              <blockquote>
+                Very talkative, analytical, approachable as a person, funny,
+                makes you feel comfortable and trust him.
+              </blockquote>
+              <figcaption>— M.K.</figcaption>
+            </figure>
+            <figure class="testimonial">
+              <blockquote>
+                One of the best cardiologists. He saved my mother when everyone
+                else had written her off. Incredible as a doctor and as a
+                person!!!
+              </blockquote>
+              <figcaption>— J.R.</figcaption>
+            </figure>
+            <figure class="testimonial">
+              <blockquote>
+                Amazing doctor and person. Excellent cardiologist with great
+                experience
+              </blockquote>
+              <figcaption>— L.S.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog preview -->
+      <section id="blog" class="section section--muted">
+        <div class="container">
+          <header class="section__header">
+            <h2 class="section__title">Τελευταία Άρθρα</h2>
+          </header>
+          <div class="grid grid--3 posts">
+            <article class="post">
+              <div class="post__media" aria-hidden="true"></div>
+              <div class="post__body">
+                <h3 class="post__title">
+                  <a href="#">5 lifestyle tips for a healthy heart</a>
+                </h3>
+                <p class="post__meta">Oct 10, 2025</p>
+              </div>
+            </article>
+            <article class="post">
+              <div class="post__media" aria-hidden="true"></div>
+              <div class="post__body">
+                <h3 class="post__title">
+                  <a href="#">Understanding your ECG results</a>
+                </h3>
+                <p class="post__meta">Sep 25, 2025</p>
+              </div>
+            </article>
+            <article class="post">
+              <div class="post__media" aria-hidden="true"></div>
+              <div class="post__body">
+                <h3 class="post__title">
+                  <a href="#">How stress impacts heart health</a>
+                </h3>
+                <p class="post__meta">Sep 02, 2025</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__widgets">
+        <section class="footer__col">
+          <h3 class="footer__title">About CardioCenter</h3>
+          <p>
+            Παρέχουμε ολοκληρωμένες καρδιολογικές υπηρεσίες με έμφαση στην
+            πρόληψη και την φροντίδα με επίκεντρο τον ασθενή.
+          </p>
+        </section>
+        <section class="footer__col">
+          <h3 class="footer__title">Τμήματα</h3>
+          <ul class="list list--plain">
+            <li><a href="#services">Συμβουλευτική</a></li>
+            <li><a href="#services">Διαγνωστικά</a></li>
+            <li><a href="#services">Αποκατάσταση</a></li>
+          </ul>
+        </section>
+        <section class="footer__col">
+          <h3 class="footer__title">Ώρες Λειτουργίας</h3>
+          <ul class="list list--plain">
+            <li>Δευτέρα–Παρασκευή: 09:00–18:00</li>
+            <li>Σάββατο: Με Ραντεβού</li>
+            <li>Κυριακή: Κλειστά</li>
+          </ul>
+        </section>
+        <section class="footer__col">
+          <h3 class="footer__title">Επικοινωνία</h3>
+          <ul class="list list--plain">
+            <li>Ακροπόλεως 186, Νίκαια 18451</li>
+            <li>+30 210 686 7158</li>
+            <li>+30 6937 418 080</li>
+            <li>
+              <a href="mailto:info@cardiocenter.example"
+                >capa.medicalpractice@gmail.com</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer__bar">
+        <div class="container footer__bar-inner">
+          <p>© <span id="year"></span> CardioCenter. All rights reserved.</p>
+          <ul class="topbar__social">
+            <li>
+              <a href="#" aria-label="Facebook"
+                ><img
+                  src="./assets/img/facebook.svg"
+                  alt=""
+                  width="18"
+                  height="18"
+              /></a>
+            </li>
+            <li>
+              <a href="#" aria-label="Twitter"
+                ><img
+                  src="./assets/img/twitter.svg"
+                  alt=""
+                  width="18"
+                  height="18"
+              /></a>
+            </li>
+            <li>
+              <a href="#" aria-label="YouTube"
+                ><img
+                  src="./assets/img/youtube.svg"
+                  alt=""
+                  width="18"
+                  height="18"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/main.js" defer></script>
+  </body>
+</html>
