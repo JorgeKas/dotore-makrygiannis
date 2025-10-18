@@ -370,6 +370,8 @@ h6 {
   .grid--3 {
     grid-template-columns: 1fr;
   }
+  /* Hide header entirely on small mobile widths */
+  .header{ display:none; }
 }
 /* Buttons */
 .button {
