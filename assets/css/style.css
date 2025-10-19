@@ -222,15 +222,21 @@ img {
 .hero__content.has-media {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  grid-template-areas: "text media" 
-                       "actions actions";
+  grid-template-areas:
+    "text media"
+    "actions actions";
   gap: 28px;
   align-items: center;
 }
 .hero__text {
-  min-width: 0; grid-area:text;
+  min-width: 0;
+  grid-area: text;
 }
-.hero__media { margin:0; position:relative; grid-area:media; }
+.hero__media {
+  margin: 0;
+  position: relative;
+  grid-area: media;
+}
 .hero__media {
   --h-ratio: 0.65;
 }
@@ -243,7 +249,10 @@ img {
   background: #fff;
   display: block;
 }
-.hero__actions{ grid-area:actions; justify-content:center; }
+.hero__actions {
+  grid-area: actions;
+  justify-content: center;
+}
 /* If you want a fixed ratio crop instead of intrinsic size, uncomment:
 .hero__media{aspect-ratio:16/10}
 .hero__media img{height:100%;object-fit:cover}
@@ -370,8 +379,10 @@ h6 {
   .grid--3 {
     grid-template-columns: 1fr;
   }
-  /* Hide header entirely on small mobile widths */
-  .header{ display:none; }
+  /* Hide topbar on mobile */
+  .topbar { display:none; }
+  /* Make hero headings smaller on mobile */
+  .hero__title, .hero__subtitle, .hero h1, .hero h2, .hero h3 { font-size: 1rem; }
 }
 /* Buttons */
 .button {
@@ -686,21 +697,59 @@ h6 {
   }
 }
 /* Mobile refinements */
-@media (max-width: 600px){
+@media (max-width: 600px) {
   /* Header: limit text to at most two lines */
-  .header a, .header .nav__link, .header .button{
-    display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; line-clamp:2; overflow:hidden;
+  .header a,
+  .header .nav__link,
+  .header .button {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
   }
 
   /* Hero: stack content, make image full-width and center text/buttons */
-  .hero .container{ padding:0; }
-  .hero__content.has-media{ grid-template-columns:1fr; grid-template-areas: "media" "text" "actions"; }
-  .hero__text{ padding:0 16px; text-align:center; }
-  .hero__actions{ justify-content:center; }
-  .hero__title{ font-size: var(--fs-700); display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:1; line-clamp:1; overflow:hidden; }
-  .hero__subtitle{ font-size: var(--fs-400); display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:1; line-clamp:1; overflow:hidden; }
-  .hero__media{ aspect-ratio:16/9; }
-  .hero__media img{ height:100%; object-fit:cover; object-position: top center; }
+  .hero .container {
+    padding: 0;
+  }
+  .hero__content.has-media {
+    grid-template-columns: 1fr;
+    grid-template-areas: "media" "text" "actions";
+  }
+  .hero__text {
+    padding: 0 16px;
+    text-align: center;
+  }
+  .hero__actions {
+    justify-content: center;
+  }
+  .hero__title {
+    font-size: 1rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    overflow: hidden;
+  }
+  .hero__subtitle {
+    font-size: 1rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    overflow: hidden;
+  }
+  /* Ensure all hero H elements are small on mobile */
+  .hero h1, .hero h2, .hero h3 { font-size: 1rem; }
+  .hero__media {
+    aspect-ratio: 16/9;
+  }
+  .hero__media img {
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
 }
 @media (max-width: 520px) {
   .footer__widgets {
