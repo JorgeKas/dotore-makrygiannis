@@ -678,6 +678,7 @@ h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-right: 12px; /* shift away from right edge so X is fully visible */
   }
   .nav {
     position: absolute;
@@ -686,7 +687,7 @@ h6 {
     right: 0;
     background: #fff;
     border-top: 1px solid var(--border);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     transform: translateY(-12px);
     opacity: 0;
     pointer-events: none; /* prevent blocking the toggle when hidden */
