@@ -7,9 +7,32 @@
   const toggle = qs('.nav-toggle');
   const nav = qs('#site-nav');
   if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', String(open));
+    const closeNav = () => {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+    const openNav = () => {
+      nav.classList.add('is-open');
+      toggle.setAttribute('aria-expanded', 'true');
+    };
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = nav.classList.contains('is-open');
+      isOpen ? closeNav() : openNav();
+    });
+
+    // Close when clicking outside nav
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      const clickInsideNav = nav.contains(target) || toggle.contains(target);
+      if (!clickInsideNav) {
+        closeNav();
+      }
+    });
+
+    // Close when choosing a menu item
+    qsa('.nav__link', nav).forEach((link) => {
+      link.addEventListener('click', () => closeNav());
     });
   }
 
