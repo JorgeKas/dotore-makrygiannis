@@ -133,6 +133,7 @@ img {
   justify-content: space-between;
   gap: 16px;
   min-height: 72px;
+  position: relative; /* anchor for absolute nav dropdown */
 }
 .logo img {
   display: block;
@@ -380,9 +381,17 @@ h6 {
     grid-template-columns: 1fr;
   }
   /* Hide topbar on mobile */
-  .topbar { display:none; }
+  .topbar {
+    display: none;
+  }
   /* Make hero headings smaller on mobile */
-  .hero__title, .hero__subtitle, .hero h1, .hero h2, .hero h3 { font-size: 1rem; }
+  .hero__title,
+  .hero__subtitle,
+  .hero h1,
+  .hero h2,
+  .hero h3 {
+    font-size: 1rem;
+  }
 }
 /* Buttons */
 .button {
@@ -672,14 +681,22 @@ h6 {
   }
   .nav {
     position: absolute;
-    inset: auto 0 0 0;
+    top: 100%; /* place dropdown below header */
+    left: 0;
+    right: 0;
     background: #fff;
     border-top: 1px solid var(--border);
-    transform: translateY(-150%);
-    transition: transform 0.25s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none; /* prevent blocking the toggle when hidden */
+    transition: transform 0.25s ease, opacity 0.2s ease;
+    z-index: 40; /* under sticky header but above page */
   }
   .nav.is-open {
     transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
   }
   .nav__list {
     flex-direction: column;
@@ -757,7 +774,11 @@ h6 {
     overflow: hidden;
   }
   /* Ensure all hero H elements are small on mobile */
-  .hero h1, .hero h2, .hero h3 { font-size: 1rem; }
+  .hero h1,
+  .hero h2,
+  .hero h3 {
+    font-size: 1rem;
+  }
   .hero__media {
     aspect-ratio: 16/9;
   }
