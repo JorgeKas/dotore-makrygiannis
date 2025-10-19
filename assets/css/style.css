@@ -130,7 +130,7 @@ img {
 .header__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start; /* avoid squeezing/cutting the logo */
   gap: 16px;
   min-height: 72px;
   position: relative; /* anchor for absolute nav dropdown */
@@ -178,13 +178,14 @@ img {
   border: 0;
   padding: 8px;
   cursor: pointer;
+  margin-left: auto; /* keep toggle on the far right */
 }
 .nav-toggle__bar {
   display: block;
   width: 24px;
   height: 2px;
   background: var(--brand-dark);
-  margin: 4px 0;
+  margin: 0; /* remove margins to avoid clipping X on mobile */
 }
 
 /* Hero */
